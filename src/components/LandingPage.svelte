@@ -9,9 +9,11 @@
 
 <div class="landingpage">
     <img class="landingpage-logo" src={LandingPageLogo} alt="Big Langing Page Logo"/>
+    <div class="flames">
     <img class="flame1" src={LandingPageFlame1} alt="Flame Icon"/>
     <img class="flame2" src={LandingPageFlame2} alt="Flame Icon"/>
     <img class="flame3" src={LandingPageFlame2} alt="Flame Icon"/>
+    </div>
     <img class="landingpage-slogan" src={Slogan} alt="Delivery Recouped"/>
     <h3 class="landingpage-sub-slogan">Pigeons Are Ready To Deliver.</h3>
     <h5 class="accent-text">(at a click of a button)</h5>
@@ -33,33 +35,42 @@
             transition: all .5s ease;
         }
 
-
+        .flames{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            position: relative;
+            top: 35.5vw;
+            
         .flame1{
-            position: absolute;
-            width: 245px;
-            height: 157px;
-            left: 34px;
-            top: 75vh;
+      position: absolute;
+      width: 245px;
+      height: 157px;
+      left: 34px;
+      top: 20vh;
 
-        }
+  }
 
         .flame2{
-            position: absolute;
-             width: 121px;
-            height: 71px;
-            left: 10px;
-            top:90vh;
+     
+       width: 121px;
+      height: 71px;
+      left: 10px;
+      top:90vh;
 
-        }
+  }
 
         .flame3{
-            position: absolute;
-             width: 121px;
-            height: 71px;
-            left: -90px;
-            top: 72vh;
+      
+       width: 121px;
+      height: 71px;
+      left: -90px;
+      top: 72vh;
+  }
+
         }
-   
+
+
 
         .landingpage-slogan{
             position: absolute;
