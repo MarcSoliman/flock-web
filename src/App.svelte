@@ -1,12 +1,48 @@
 <script lang="ts">
 
+  import {Router, Link, Route} from 'svelte-routing';
+
   import LandingPage from "./components/LandingPage.svelte"
+  import DeliveryPage from "./components/DeliveryPage.svelte";
+
+  export let url = ""
 </script>
 
-
+<div class="app">
+  <div class="sections">
   <LandingPage/>
+  <DeliveryPage/>
+  </div>
+</div>
 
 
-<style>
+<style type="text/scss">
+
+.app {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+
+  .sections {
+    scroll-snap-stop: always;
+    width: 100%;
+    height: calc(100vh - 55px);
+
+    position: relative;
+
+
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    }
+  }
+
+
+
 
 </style>

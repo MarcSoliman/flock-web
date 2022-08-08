@@ -2,249 +2,258 @@
     import LandingPageLogo from '../assets/HomePageLogo.svg'
     import LandingPageFlame1 from '../assets/HomePageFlame1.svg'
     import LandingPageFlame2 from '../assets/HomePageFlame2.svg'
+    import Arrow from '../assets/Arrow.svg'
     import Slogan from '../assets/Slogan.svg'
     
 </script>
 
 
-<div class="landingpage">
+<div class="landingpage">  
+    <div class="left">
     <img class="landingpage-logo" src={LandingPageLogo} alt="Big Langing Page Logo"/>
+
     <div class="flames">
-    <img class="flame1" src={LandingPageFlame1} alt="Flame Icon"/>
-    <img class="flame2" src={LandingPageFlame2} alt="Flame Icon"/>
-    <img class="flame3" src={LandingPageFlame2} alt="Flame Icon"/>
+        <img class="flame1" src={LandingPageFlame2} alt="Flame Icon"/>
+        <img class="flame2" src={LandingPageFlame1} alt="Flame Icon"/>
+        <img class="flame3" src={LandingPageFlame2} alt="Flame Icon"/>
+        </div>
     </div>
+
+    <div class="right">
     <img class="landingpage-slogan" src={Slogan} alt="Delivery Recouped"/>
     <h3 class="landingpage-sub-slogan">Pigeons Are Ready To Deliver.</h3>
     <h5 class="accent-text">(at a click of a button)</h5>
     <h2 class="call-to-action">let's see the Flock</h2>
+    <a href="#delivery-page"  ><img class="landingpage-arrow" src={Arrow} alt="Arrow"/></a>
+    </div>
+
 </div>
 
 <style type="text/scss">
     .landingpage{
+
+        scroll-snap-align: start;
         
-    position:relative;
-       
 
-       
-        .landingpage-logo{
-           width: 1022px;
-           position: absolute;
-           top: -18.5vh;
-           left: -5vw;
-            transition: all .5s ease;
+    .left{
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+
+    .landingpage-logo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
+            width: min(50vw, 300px);
+            margin-bottom: min(2vw,3rem);
+            transition: all 0.6s ease;
         }
-
-        .flames{
+    }
+          
+    
+    .right
+        {
             display: flex;
             flex-direction: column;
-            gap: 10px;
-            position: relative;
-            top: 35.5vw;
-            
-        .flame1{
-      position: absolute;
-      width: 245px;
-      height: 157px;
-      left: 34px;
-      top: 20vh;
-
-  }
-
-        .flame2{
-     
-       width: 121px;
-      height: 71px;
-      left: 10px;
-      top:90vh;
-
-  }
-
-        .flame3{
-      
-       width: 121px;
-      height: 71px;
-      left: -90px;
-      top: 72vh;
-  }
-
-        }
-
-
+            align-items: center;
+            justify-self: center;
 
         .landingpage-slogan{
-            position: absolute;
-            top: 10vh;
-            right: 5%;
-            width: 50%;
-            transition: all .5s ease;
-           
+        
+            width: min(90vw, 600px);
+            margin-bottom: min(5vw, 200px);
         }
+    
 
         .landingpage-sub-slogan{
-            position: absolute;
-
-            right: 6%;
-            top: 280px;
-            right: 7vw;
             font-weight: 400;
             font-family: 'New Tegomin';
-            width: 40%;
-            font-size: 48px;
-            line-height: 70px;
+            margin-top: 0.5rem;
+            width: 90%;
+            font-size: min(8vw,2rem);
+            line-height: 50px;
             text-align: center;
             color: #F848B8;
-            transition: all .2s ease;
+            margin-bottom: clamp(1rem, 8rem, 3rem);
+
+
+   
         }
 
         .accent-text{
-            position: absolute;
-            right:22%;
-            top: 48vh;
+
+
+            text-align: center;
             font-family: 'New Tegomin';
             font-style: normal;
             font-weight: 400;
-            font-size: 24px;
+            font-size: min(5vw,2rem);
             line-height: 35px;
 
+
             color: rgba(248, 72, 184, 0.22);
-            transition: all .2s ease;
+            margin-bottom: clamp(2px, 8vw, 1.5rem);
 
         }
 
         .call-to-action{
-            position: absolute;
-
-            right: 10%;
-            top: 60vh;
             text-align: center;
             font-family: 'Lora', serif;
             font-style: normal;
             font-weight: 700;
-            font-size: 4vw;
+            font-size: clamp(1.3rem, 6vw, 3rem);
             line-height: 116px;
 
             color: #F8489D;
-            transition: all .2s ease;
+            margin-bottom: clamp(1px, 14vw, 50px);
         }
-        // 1665px and below media query
-        @media screen and (max-width:1670px) {    
-            
-            .landingpage-logo{
-                width: 50%;
-                justify-content: center;
-                align-items: center;
-                top: -10vh;
-                left: -8vw;
-            }
+        .landingpage-arrow{
+                width: clamp(60px,20vw,90px);
+                height: 60px;
+                cursor: pointer;
 
-            .landingpage-slogan{
-                width: 50%;
-           
-            }
+                transition: transform 0.6s ease;
 
-            .landingpage-sub-slogan{
-               width: 50%;
-               font-size: 2.8vw;
-               right: 2%;
-
-               text-align: center;
-               
+                &:hover{
+                    transform: scale(1.2);
+                }
             }
+    
+    }
 
-            .accent-text{
-                font-size: 1.6vw;
-            }
+    .flames{
+        margin-top: 40px;
+   
+        width: 100px;
+        height: 300px;
+ 
+        display: flex;
+        flex-direction: column;
+        display: none;
+ 
+        transition: all 0.6s ease;
 
-            .call-to-action{
-                right:14%;
-            }
+
+        .flame1,.flame2,.flame3{
+            transition: all 0.6s ease;
         }
-        @media screen and (max-width:970px) {    
-            
-            .landingpage-logo{
-                width: 40vw;
+
+        .flame1{
+            width: 10px;
+            margin-left: -60px;
+
+        }
+        .flame2{
+            width: 10px;
+            margin-left: 30px;
+            margin-top: -45px;
+        }
+        .flame3{
+            width: 10px;
+            margin-left: 2px;
+        }
+    }
+}
+
+    @media (min-width: 1025px){
+        
+        .landingpage{
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            height: 100vh;
+             overflow: hidden;
              
-                position: absolute;
-                top: 2vh;
-                
-                left: 30vw;
-                justify-content: center;
-                align-items: center;
-            }
 
-            .landingpage-slogan{
-                width: 90%;
-                right: 5vw;
-                top:40vw;
-            }
-
-            .landingpage-sub-slogan{
-                width: 90%;
-                right: 5vw;
-                font-size: 5.5vw;
-                top:50vw;
-               
-            }
-
-            .accent-text{
-                width: 70%;
-                right: -2vw;
-                font-size: 3vw;
-                top:65vw;
-               
-            }
-
-            .call-to-action{
-                top:70vw;
-                font-size: 7vw;
-                right:20vw;
-            }
-        }
-        @media screen and (max-width:660px) {    
-            
-            .landingpage-logo{
-                width: 50vw;
+            .right{
+                flex : .5;
+                display: flex;
              
-                position: absolute;
-                top: 2vh;
                 
-                left: 25vw;
-                justify-content: center;
-                align-items: center;
+                .landingpage-slogan{
+                    margin-top: 105px;
+                    margin-left: -110px;
+                    padding-right: 1rem;
+                    width: clamp(600px,50vw,1000px);
+            
+                    margin-bottom: 35px;
+                    
+                }
+
+                .landingpage-sub-slogan{
+                    
+                    font-size:35px;
+                    width: 600px;
+                    margin-bottom: 40px;
+                    padding-right: 1rem;
+                }
+
+                .accent-text{
+                    font-size: 30px;
+                    margin-bottom: 200px;
+
+                }
+
+                .call-to-action{
+                    font-size: 50px;
+                    margin-bottom: 20px;
+                   
+                }
+                .landingpage-arrow{
+                 width: auto;
+                 margin-bottom: auto ;
+                }
+
             }
 
-            .landingpage-slogan{
-                width: 90%;
-                right: 5vw;
-                top:60vw;
-            }
+            .left{
+                display: flex;
+                flex-direction: column;
+                flex : .5;
+                position: relative;
+             
 
-            .landingpage-sub-slogan{
-                width: 90%;
-                right: 5vw;
-                font-size: 7vw;
-                top:75vw;
-               
-            }
 
-            .accent-text{
-                width: 70%;
-                right: 8vw;
-                font-size: 5vw;
-                top:110vw;
-               
-            }
-
-            .call-to-action{
+                .landingpage-logo{
+                margin-bottom: 0;
+        
                 
-                top:115vw;
-                font-size: 9vw;
+                width: clamp(720px,70vw,870px);
+
+                margin-left: -270px;
                 
-                right:10vw;
+                margin-top: clamp(-135px,-20vh,-190px);
+
+                }
+            
+        .flames{
+            display: flex;
+            margin-top: -60px;
+            margin-left: -840px;
+            margin-bottom: 0;
+            position: absolute;
+            top: 800px;
+            
+        .flame1{
+            width: 80px;
+        }
+        .flame2{
+            width: 200px;
+        }
+        .flame3{
+            width: 110px;
+        }
+        
             }
         }
     }
+}
+
+    
+       
+
     </style>
 
-<!-- markup (zero or more items) goes here -->
