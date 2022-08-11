@@ -34,7 +34,10 @@
 
         position:relative;
         scroll-snap-align: start;
-        height:100vh;
+        height:200vh;
+        background-color: #fff;
+        
+      
         
 
     .left{
