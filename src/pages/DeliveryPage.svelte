@@ -1,7 +1,7 @@
 <script>
-    import WelcomeBack from '../components/WelcomeBack.svelte';
-    import DeliveryQuestion from '../components/DeliveryQuestion.svelte';
-    import Navbar from '../components/navbar.svelte';
+    import WelcomeBack from '../lib/WelcomeBack.svelte';
+    import DeliveryQuestion from '../lib/DeliveryQuestion.svelte';
+    import Navbar from '../lib/Navbar.svelte';
     // your script goes here
 </script>
 

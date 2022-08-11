@@ -2,8 +2,8 @@
 
   import {Router, Link, Route} from 'svelte-routing';
 
-  import LandingPage from "./components/LandingPage.svelte"
-  import DeliveryPage from "./components/DeliveryPage.svelte";
+  import LandingPage from "./pages/LandingPage.svelte"
+  import DeliveryPage from "./pages/DeliveryPage.svelte";
 
   export let url = ""
 </script>

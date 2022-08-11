@@ -32,7 +32,9 @@
 <style type="text/scss">
     .landingpage{
 
+        position:relative;
         scroll-snap-align: start;
+        height:100vh;
         
 
     .left{
@@ -106,15 +108,17 @@
             font-weight: 700;
             font-size: clamp(1.3rem, 6vw, 3rem);
             line-height: 116px;
-
+            height: clamp(1.3rem, 20vw, 5rem);
+            margin-bottom: 3vh;
             color: #F8489D;
-            margin-bottom: clamp(1px, 14vw, 50px);
+           
         }
         .landingpage-arrow{
+                position: static;
+       
                 width: clamp(60px,20vw,90px);
                 height: 60px;
                 cursor: pointer;
-
                 transition: transform 0.6s ease;
 
                 &:hover{
@@ -199,7 +203,7 @@
 
                 .call-to-action{
                     font-size: 50px;
-                    margin-bottom: 20px;
+                    margin-bottom: clamp(1px, 10vw, 50px);
                    
                 }
                 .landingpage-arrow{
