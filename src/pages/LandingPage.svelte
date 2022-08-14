@@ -34,7 +34,7 @@
 
         position:relative;
         scroll-snap-align: start;
-        height:200vh;
+        height: max(100vh,800px);
         background-color: #fff;
         
       
