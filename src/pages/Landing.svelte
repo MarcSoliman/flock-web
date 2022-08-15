@@ -57,8 +57,6 @@
             transition: all 0.6s ease;
         }
     }
-          
-    
     .right
         {
             display: flex;
@@ -83,14 +81,9 @@
             text-align: center;
             color: #F848B8;
             margin-bottom: clamp(1rem, 8rem, 3rem);
-
-
-   
         }
 
         .accent-text{
-
-
             text-align: center;
             font-family: 'New Tegomin';
             font-style: normal;
@@ -98,10 +91,8 @@
             font-size: min(5vw,2rem);
             line-height: 35px;
 
-
             color: rgba(248, 72, 184, 0.22);
             margin-bottom: clamp(2px, 8vw, 1.5rem);
-
         }
 
         .call-to-action{
@@ -114,7 +105,6 @@
             height: clamp(1.3rem, 20vw, 5rem);
             margin-bottom: 3vh;
             color: #F8489D;
-           
         }
         .landingpage-arrow{
                 position: static;
@@ -128,7 +118,6 @@
                     transform: scale(1.2);
                 }
             }
-    
     }
 
     .flames{
