@@ -10,12 +10,22 @@
     <Navbar/>
 
     <div class='body-wrapper'>
+    
+        <div class="welcome-column">
+            <WelcomeBack />
+        
+         </div>
     <div class="left">
+
+    <div class="welcome">
     <WelcomeBack />
 
+    </div>
     <h2 class="theperfectpackage">Lets Find the Perfect Carrier Pigeon For You</h2>
+    
 
     <DeliveryQuestion />
+ 
     </div>
     <div class="right">
     <DeliveryRightPanel/>
@@ -37,6 +47,9 @@
             overflow: hidden;
             display: flex;
             
+            .welcome-column{
+                display: none;
+            }
           
         .left{
            
@@ -45,6 +58,7 @@
             flex: .9;
             height: 100vh;
             
+
      
 
             .theperfectpackage{
@@ -70,9 +84,35 @@
             
         }
 
+    }
+        @media (max-width: 1173px){
+            .body-wrapper{
 
-        @media (min-width: 1173px){
-       
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            
+            .left{
+                order:2;
+            }
+            
+            .right{
+                order:1;
+            }
+
+            .welcome-column{
+                display:flex;
+                margin-bottom: 20px;
+                
+            }
+
+            .welcome{
+                display: none!important;
+            } 
+            .theperfectpackage{
+                display: none!important;
+            }
+
     }
     }
 }

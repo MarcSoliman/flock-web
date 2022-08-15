@@ -58,7 +58,7 @@
             line-height: 50px;
             text-align: center;
             font-family:'Roboto Slab', serif;
-            width: 100%;
+            
             color: #fff;
             flex: .1;
         }
@@ -102,10 +102,20 @@
             }
         }
     }
-
-    
-
    }
+    @media (max-width: 1173px){
+        .panel-wrapper{
+            width: 92vw;
+            border-radius: 61px;
+            padding: 0 30px 30px 30px;
+
+            .subheader{
+                font-size: 3vw!important;
+            }
+        }
+    }
+
+   
 
 </style>
 

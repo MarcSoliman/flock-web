@@ -23,7 +23,6 @@
     align-items: center;
     flex:.3 0 auto;
     gap: 20px;
-
     .question{
         font-family: 'New Tegomin';
 
@@ -96,7 +95,18 @@
     }
 
     }
+
 }
+@media (max-width: 1173px){
+        .question-wrapper{
+            margin-top: 50px;
+            
+        }
+        
+        .question{
+            font-size: 4vw!important;
+        }
+    }
     
 </style>
 

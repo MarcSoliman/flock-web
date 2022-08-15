@@ -28,6 +28,12 @@
         }
     }
 }
+
+@media (max-width: 1173px){
+     .welcome-back{
+        font-size: 6vw!important;
+     }   
+    }
 </style>
 
 <!-- markup (zero or more items) goes here -->
