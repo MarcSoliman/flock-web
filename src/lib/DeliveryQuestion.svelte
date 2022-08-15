@@ -17,10 +17,13 @@
 
 <style type="text/scss">
 .question-wrapper{
-    margin-top: 120px;
+    margin-bottom: 0;
     margin-left:50px;
     display: flex;
+    align-items: center;
+    flex:.3 0 auto;
     gap: 20px;
+
     .question{
         font-family: 'New Tegomin';
 
@@ -40,7 +43,7 @@
         gap: 30px;
     input{
         margin-top: 30px;
-        width: 18vw;
+        width: 24vw;
         height: 30px;
         padding: 20px 10px;
         font-size: 25px;
@@ -61,12 +64,12 @@
         color: #fff;
         background-color: #F848B8;
         font-family: 'Roboto Slab', serif;
-        font-size: 30px;
+        font-size: 2vw;
         border-radius:10px;
         border-width: 6px;
 
-        width:70px;
-        height: 60px;
+        width:5vw;
+        height: 4vw;
 
         outline: none;
         }

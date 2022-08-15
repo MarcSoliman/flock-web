@@ -22,7 +22,12 @@
   height: 100vh;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
-  overflow-y: scroll;
+  overflow-y: auto;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  &::-webkit-scrollbar {
+  display: none;
+}
 
   .sections {
     scroll-snap-stop: always;

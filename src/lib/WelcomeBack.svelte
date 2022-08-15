@@ -7,6 +7,8 @@
 </div>
 
 <style type="text/scss">
+.welcome-back-wrapper {
+    flex:.2 0 auto;
     .welcome-back{
         margin-top: 50px;
         margin-left: 50px;
@@ -15,7 +17,8 @@
         font-weight: 600;
         font-size: 50px;
         line-height: 50px;
-
+        display: flex;
+        gap: 20px;
         color: #F8489D;
 
         span{
@@ -24,6 +27,7 @@
             text-shadow: -2px -2px 0 #F8489D, 2px -2px 0 #F8489D, -2px 2px 0 #F8489D, 2px 2px 0 #F8489D;
         }
     }
+}
 </style>
 
 <!-- markup (zero or more items) goes here -->

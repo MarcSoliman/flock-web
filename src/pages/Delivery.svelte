@@ -9,6 +9,7 @@
 <div class="delivery-page" id="delivery-page">
     <Navbar/>
 
+    <div class='body-wrapper'>
     <div class="left">
     <WelcomeBack />
 
@@ -19,15 +20,11 @@
     <div class="right">
     <DeliveryRightPanel/>
     </div>  
+    </div>
 </div>
 
 <style type="text/scss">
     .delivery-page{
-
-        .left{
-            width: 50vw;
-        }
-
 
         position: relative;
         scroll-snap-align: start;
@@ -35,19 +32,50 @@
         background-color: #fff;
         z-index: 2;
 
-        .theperfectpackage{
-        font-family: 'Roboto Slab', serif;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 66px;
-        line-height: 110px;
-        width: 800px;
-        margin-left:50px;
-        margin-top:120px;
+        .body-wrapper{
+            display: flex;
+            overflow: hidden;
+            display: flex;
+            
+          
+        .left{
+           
+            flex-direction: column;
+            display: flex;
+            flex: .9;
+            height: 100vh;
+            
+     
 
-        color: #F8489D;
+            .theperfectpackage{
+                font-family: 'Roboto Slab', serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 66px;
+                line-height: 110px;
+                width: 800px;
+                margin-left:50px;
+                flex:.2 0 auto;
+                display: flex;    
+
+                color: #F8489D;
         }
+            
+        }
+
+        .right{
+            
+            flex:.1;
+            margin-top: 2vh;
+            
+        }
+
+
+        @media (min-width: 1173px){
+       
     }
+    }
+}
 </style>
 
 <!-- markup (zero or more items) goes here -->
