@@ -103,11 +103,78 @@
             
         }
         
+
+        .buttons{
+        button{
+        width:8vw!important;
+        height: 8vw!important;
+        font-size: 4vw!important;
+        }
+    }
+
         .question{
             font-size: 4vw!important;
         }
     }
-    
+    @media (max-width: 760px){
+        .question-wrapper{
+            margin-top: 2vh;
+            margin-left:auto;
+            margin-right: auto;
+            gap:0!important;
+        }
+        
+
+        .buttons{
+        button{
+        width:8vw!important;
+        height: 8vw!important;
+        font-size: 4vw!important;
+        }
+    }
+
+        .inputs{
+            flex:.5;
+        }
+        .question{
+            font-size: 5vw!important;
+            flex:.5;
+            width:auto!important;
+            margin-left: 30px;
+        }
+}
+@media (max-width: 430px){
+    .question-wrapper{
+        margin-top: 2vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-left:0;
+        
+    }
+
+    input{
+        width: 60vw!important;
+        padding: 15px 10px!important;
+        font-size: 5vw!important;
+        margin-top: 2vh!important;
+       
+        
+    }
+    .buttons{
+        button{
+        width:10vw!important;
+        height: 10vw!important;
+        font-size: 4vw!important;
+        }
+    }
+    .question{
+            font-size: min(5vw,2vh)!important;
+            text-align: center!important;
+            margin-left: 0;
+        }
+}
 </style>
 
 <!-- markup (zero or more items) goes here -->

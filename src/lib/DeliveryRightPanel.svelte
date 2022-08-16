@@ -20,7 +20,7 @@
     width:30vw;
     height: 100%;
     padding: 0 30px 0 30px;
-    
+    flex:.2 0 auto;
     
 
     .panel-body{
@@ -109,13 +109,34 @@
             border-radius: 61px;
             padding: 0 30px 30px 30px;
 
+            .header{
+                font-size: 3vw!important;
+                line-height: 50px!important;
+            }
+
             .subheader{
                 font-size: 3vw!important;
+                line-height: 50px!important;
             }
         }
     }
 
-   
+    @media (max-width: 760px){
+        .panel-wrapper{
+            .header{
+                font-size: 5vw!important;
+                line-height: 35px!important;
+            }
+            img{
+                margin: 20px 0!important;
+            }
+        .subheader{
+                font-size: 5vw!important;
+                line-height: 35px!important;
+            }
+        }
+    }
+
 
 </style>
 

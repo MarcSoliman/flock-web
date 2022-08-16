@@ -102,7 +102,7 @@
 
             .welcome-column{
                 display:flex;
-                margin-bottom: 20px;
+                margin-bottom: .5vh;
                 
             }
 
@@ -115,6 +115,10 @@
 
     }
     }
+}
+
+@media (max-width: 760px){
+
 }
 </style>
 

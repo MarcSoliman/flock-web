@@ -8,6 +8,8 @@
 
 <style type="text/scss">
 .welcome-back-wrapper {
+    display: flex;
+    
     flex:.2 0 auto;
     .welcome-back{
         margin-top: 50px;
@@ -31,7 +33,15 @@
 
 @media (max-width: 1173px){
      .welcome-back{
+        margin-left: 0!important;
+        margin-top: 20px!important;
         font-size: 6vw!important;
+     }   
+    }
+
+    @media (max-width: 760px){
+        .welcome-back{
+        font-size: 8vw!important;
      }   
     }
 </style>
