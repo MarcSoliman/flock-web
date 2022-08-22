@@ -1,16 +1,21 @@
 <script>
-    // your script goes here
-    var current = ""
+    import {currentDeliveryPage} from "./stores";
+    var systemOfMeasurment = ""
+
+    let currentPage;
+    currentDeliveryPage.subscribe(value => {
+		currentPage = value;
+	});
 </script>
 
 <div class="question-wrapper">
     <h4 class="question">How Heavy <span>(or light)</span> is your package?</h4>
     <div class="inputs">
-        <input type="text"/>
+        <input type="number" min="0" max="100"/>
         <div class="buttons">
-        <button class="btn-1 {current === 'kg' ? 'selected' : ''}" on:click="{() => current = 'kg'}">kg</button>
+        <button class="btn-1 {systemOfMeasurment === 'kg' ? 'selected' : ''}" on:click="{() => systemOfMeasurment = 'kg'}">kg</button>
         
-        <button class="btn-2 {current === 'lbs' ? 'selected' : ''}" on:click="{() => current = 'lbs'}">lbs</button>
+        <button class="btn-2 {systemOfMeasurment === 'lbs' ? 'selected' : ''}" on:click="{() => systemOfMeasurment = 'lbs'}">lbs</button>
         </div>
     </div>
 </div>

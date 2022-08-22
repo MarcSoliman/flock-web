@@ -8,7 +8,7 @@
 </script>
 
 
-<div class="landingpage">  
+<div class="landingpage" id="landing-page">  
     <div class="left">
     <img class="landingpage-logo" src={LandingPageLogo} alt="Big Langing Page Logo"/>
 

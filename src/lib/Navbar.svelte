@@ -9,7 +9,9 @@
 
 <nav>
     
-    <img class="navbar-logo" src={NavLogo} alt="Flock Navbar Logo"/>
+    <a class="navbar-logo" href="#landing-page"  >
+        <img src={NavLogo} alt="Flock Navbar Logo"/>
+    </a>
 
     <ul class="navbar-icons">
         <li>
