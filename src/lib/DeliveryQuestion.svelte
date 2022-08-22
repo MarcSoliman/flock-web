@@ -34,6 +34,13 @@
             return ['kg','lbs']
             break;
             case(2):
+            console.log(systemOfMeasurment)
+            if (systemOfMeasurment == 'kg')
+            {
+                systemOfMeasurment = 'ft'
+            } else{
+                systemOfMeasurment = 'm'
+            }
             return ['m','ft']
             break;
             case(3):
