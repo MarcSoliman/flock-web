@@ -8,7 +8,7 @@
 	});
 
     function updateCurrentPage() {
-        if (currentPage > 3) return
+        if (currentPage > 2) return
         currentDeliveryPage.update(()=>currentPage + 1)
         console.log(currentPage)
     }

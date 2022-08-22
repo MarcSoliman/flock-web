@@ -5,18 +5,57 @@
     let currentPage;
     currentDeliveryPage.subscribe(value => {
 		currentPage = value;
+        
 	});
+
+    $: question = () => {
+        switch (currentPage){
+            case (0):
+                return 'How Heavy <span style="color: #f848b863;"">(or light)</span> is your package ?'
+                break;
+            case (1):
+                return 'How wide is your package ?'
+                break;
+            case (2):
+                return 'How tall is your package ?'
+                break;
+            case (3):
+                return 'Recepient Username'
+                break;
+        }
+    }
+
+    $: measurementButtons = () => {
+        switch (currentPage){
+            case(0):
+            return ['kg','lbs']
+            break;
+            case(1):
+            return ['kg','lbs']
+            break;
+            case(2):
+            return ['m','ft']
+            break;
+            case(3):
+            return ['m','ft']
+            break;
+        }
+    }
 </script>
 
 <div class="question-wrapper">
-    <h4 class="question">How Heavy <span>(or light)</span> is your package?</h4>
+    <h4 class="question">{@html question()}</h4>
     <div class="inputs">
         <input type="number" min="0" max="100"/>
+        {#if currentPage<3}
+    
         <div class="buttons">
-        <button class="btn-1 {systemOfMeasurment === 'kg' ? 'selected' : ''}" on:click="{() => systemOfMeasurment = 'kg'}">kg</button>
+           
+        <button class="btn-1 {systemOfMeasurment === measurementButtons()[0] ? 'selected' : ''}" on:click="{() => systemOfMeasurment = measurementButtons()[0]}">{measurementButtons()[0]}</button>
         
-        <button class="btn-2 {systemOfMeasurment === 'lbs' ? 'selected' : ''}" on:click="{() => systemOfMeasurment = 'lbs'}">lbs</button>
+        <button class="btn-2 {systemOfMeasurment === measurementButtons()[1] ? 'selected' : ''}" on:click="{() => systemOfMeasurment = measurementButtons()[1]}">{measurementButtons()[1]}</button>
         </div>
+        {/if}
     </div>
 </div>
 
@@ -35,9 +74,7 @@
         width: 460px;
         color: #F848B8;
 
-        span{
-            color: #f848b863;
-        }
+    
     }
     .inputs{
         display: flex;
