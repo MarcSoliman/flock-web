@@ -1,8 +1,14 @@
 <script>
     import {currentDeliveryPage} from "./stores";
+    import {pageAnswers} from "./stores";
     var systemOfMeasurment = ""
 
-    let currentPage;
+    let localPageAnswers = [];
+    pageAnswers.subscribe(value => {
+        localPageAnswers = value;
+    });
+
+    let currentPage = 0;
     currentDeliveryPage.subscribe(value => {
 		currentPage = value;
         
@@ -29,12 +35,12 @@
         switch (currentPage){
             case(0):
             return ['kg','lbs']
+            
             break;
             case(1):
             return ['kg','lbs']
             break;
             case(2):
-            console.log(systemOfMeasurment)
             if (systemOfMeasurment == 'kg')
             {
                 systemOfMeasurment = 'ft'
@@ -48,12 +54,22 @@
             break;
         }
     }
+
+   
+
+  
 </script>
 
 <div class="question-wrapper">
     <h4 class="question">{@html question()}</h4>
     <div class="inputs">
-        <input type="number" min="0" max="100"/>
+        {#if currentPage < 3}
+        <input  type="number" bind:value={$pageAnswers[currentPage]} min="0" max="100"/>
+        {:else}
+        <input  type="text" bind:value={$pageAnswers[currentPage]} />
+        {/if} 
+        
+
         {#if currentPage<3}
     
         <div class="buttons">
@@ -76,12 +92,9 @@
     gap: 20px;
     .question{
         font-family: 'New Tegomin';
-
         font-size: 40px;
         width: 460px;
         color: #F848B8;
-
-    
     }
     .inputs{
         display: flex;

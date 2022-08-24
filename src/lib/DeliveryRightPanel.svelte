@@ -1,5 +1,6 @@
 <script>
     import HandPackage from "../assets/icon_hand_package.svg"
+    import {pageAnswers} from "./stores";
     import {currentDeliveryPage} from "./stores";
 
     let currentPage;
@@ -7,10 +8,18 @@
 		currentPage = value;
 	});
 
+    let localPageAnswers;
+    pageAnswers.subscribe(value => {
+        localPageAnswers = value;
+    }); 
     function updateCurrentPage() {
+        if (localPageAnswers[currentPage] == 0 || localPageAnswers[currentPage] == "") return
+            
+        
         if (currentPage > 2) return
         currentDeliveryPage.update(()=>currentPage + 1)
-        console.log(currentPage)
+
+        console.log(localPageAnswers[currentPage-1])
     }
 </script>
 
@@ -20,6 +29,7 @@
     <img src={HandPackage} alt="Package Handling Icon"/>
     <h3 class="subheader"> and into the hands of our trusted carriers</h3>
     <hr/>
+
     <button class="next" on:click={updateCurrentPage}>next ></button>
     </div>
 </div>
