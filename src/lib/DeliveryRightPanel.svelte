@@ -21,13 +21,46 @@
 
         console.log(localPageAnswers[currentPage-1])
     }
+
+    $: panelBodyTop = () => {
+        switch (currentPage){
+            case (0):
+                return 'Take Delivery back into your hands'
+                break;
+            case (1):
+                return 'Not too heavy, great!'
+                break;
+            case (2):
+                return 'perfect! '
+                break;
+            case (3):
+                return 'Almost there!'
+                break;
+        }
+    }
+    $: panelBodyBottom = () => {
+        switch (currentPage){
+            case (0):
+                return 'and into the hands of our trusted carriers'
+                break;
+            case (1):
+                return 'Now how wide is the package?'
+                break;
+            case (2):
+                return 'and finally how tall is the package?'
+                break;
+            case (3):
+                return 'who are you sending it to?'
+                break;
+        }
+    }
 </script>
 
 <div class="panel-wrapper">
     <div class="panel-body">
-    <h1 class="header">Take Delivery back into your hands</h1>
+    <h1 class="header">{@html panelBodyTop()}</h1>
     <img src={HandPackage} alt="Package Handling Icon"/>
-    <h3 class="subheader"> and into the hands of our trusted carriers</h3>
+    <h3 class="subheader"> {@html panelBodyBottom()}</h3>
     <hr/>
 
     <button class="next" on:click={updateCurrentPage}>next ></button>

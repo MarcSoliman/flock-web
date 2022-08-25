@@ -33,7 +33,7 @@
     </div>
 </div>
 
-<style type="text/scss">
+<style lang="scss">
     .delivery-page{
 
         position: relative;

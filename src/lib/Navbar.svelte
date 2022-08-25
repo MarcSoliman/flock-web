@@ -30,7 +30,7 @@
 </nav>
 
 
-<style type="text/scss">
+<style lang="scss">
     nav{
         height: 55px;
         background-color: #F8489D;

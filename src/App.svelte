@@ -5,7 +5,7 @@
   import LandingPage from "./pages/Landing.svelte"
   import DeliveryPage from "./pages/Delivery.svelte";
 
-  export let url = ""
+  
 </script>
 
 <div class="app">

@@ -17,7 +17,7 @@
     $: question = () => {
         switch (currentPage){
             case (0):
-                return 'How Heavy <span style="color: #f848b863;"">(or light)</span> is your package ?'
+                return 'How Heavy <span style="color: #f848b863;">(or light)</span> is your package ?'
                 break;
             case (1):
                 return 'How wide is your package ?'
@@ -82,7 +82,7 @@
     </div>
 </div>
 
-<style type="text/scss">
+<style lang="scss">
 .question-wrapper{
     margin-bottom: 0;
     margin-left:50px;

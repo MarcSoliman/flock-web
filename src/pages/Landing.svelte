@@ -29,7 +29,7 @@
 
 </div>
 
-<style type="text/scss">
+<style lang="scss">
     .landingpage{
 
         position:relative;
